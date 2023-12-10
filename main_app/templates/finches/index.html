@@ -2,6 +2,12 @@
 {% block content %}
 
 <h1>All Finches Page</h1>
-<h3>a list of all finches (index view) that displays each of the attributes of a finch.</h3>
+<!-- <h3>a list of all finches (index view) that displays each of the attributes of a finch.</h3> -->
+
+{% for finch in finches %}
+<h4>{{ finch.name }}</h4>
+<p>Color: {{ finch.color }}</p>
+<p>Age: {{ finch.age }}</p>
+{% endfor %}
 
 {% endblock %}
