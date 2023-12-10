@@ -8,8 +8,10 @@
 <body>
     <nav>
         <a href="/">Home</a>
-        <a href="/about">About</a>
+        <a href="{% url 'about' %}">About</a>
         <a href="/allfinches">All Finches</a>
+        <a href="{% url 'finches_create' %}">Add a Finch</a>
+
     </nav>
     <main class="container">
         {% block content %}

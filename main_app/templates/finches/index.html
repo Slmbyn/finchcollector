@@ -5,7 +5,8 @@
 <!-- <h3>a list of all finches (index view) that displays each of the attributes of a finch.</h3> -->
 
 {% for finch in finches %}
-<a href="/allfinches/{{ finch.id }}">
+<!-- <a href="/allfinches/{{ finch.id }}"> -->
+<a href="{% url 'detail' finch.id %}">
     <div class="card-content">
         <h4>{{ finch.name }}</h4>
         <p>Color: {{ finch.color }}</p>
