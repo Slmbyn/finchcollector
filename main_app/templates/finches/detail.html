@@ -10,4 +10,17 @@
     <a href="{% url 'finches_update' finch.id %}">Edit</a>
     <a href="{% url 'finches_delete' finch.id %}">Delete</a>
   </div>
+  <table>
+    <thead>
+      <tr><th>Date</th><th>Meal</th></tr>
+    </thead>
+    <tbody>
+      {% for feeding in finch.feeding_set.all %}
+      <tr>
+        <th>{{feeding.date}}</th>
+        <th>{{feeding.get_meal_display}}</th>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endblock %}
