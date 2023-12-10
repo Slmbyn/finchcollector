@@ -5,9 +5,14 @@
 <!-- <h3>a list of all finches (index view) that displays each of the attributes of a finch.</h3> -->
 
 {% for finch in finches %}
-<h4>{{ finch.name }}</h4>
-<p>Color: {{ finch.color }}</p>
-<p>Age: {{ finch.age }}</p>
+<a href="/allfinches/{{ finch.id }}">
+    <div class="card-content">
+        <h4>{{ finch.name }}</h4>
+        <p>Color: {{ finch.color }}</p>
+        <p>Age: {{ finch.age }}</p>
+    </div>
+</a>
 {% endfor %}
+
 
 {% endblock %}

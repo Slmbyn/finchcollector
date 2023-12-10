@@ -14,5 +14,9 @@ def allfinches (request):
         'finches': finch
     })
 
+def finch_detail (request, finch_id):
+    finch = Finch.objects.get(id=finch_id)
+    return render(request, 'finches/detail.html', {'finch':finch})
+
 # create fake finch data ( a list with dictionaries inside)
 # then pass that data to allfinches page by including it as the 3rd parameter in the render
